@@ -19,6 +19,10 @@ You are browsing the presentation brand theme for Dude, the digital agency from 
 cp -r * /var/www/reveal.js/
 ```
 
+## Creating a new presentation
+
+Just edit index.html with Markdown and reveal.js will do the rest. Considering creating a separate git repository for your index.html and images.
+
 ## Development
 
 You should improve the theme by testing it out in reveal.js repository, then copying the files over to this repository.
@@ -29,7 +33,11 @@ For styles you'll need the required packages (install on top of reveal.js reposi
 npm i stylelint-config-standard-scss stylelint-order stylelint-declaration-strict-value @ronilaukkarinen/stylelint-value-no-unknown-custom-properties @ronilaukkarinen/stylelint-a11y --save-dev
 ```
 
-Enjoy!
+After this just run:
+
+```bash
+npm start
+```
 
 ---
 
