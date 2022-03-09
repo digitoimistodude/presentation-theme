@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# Presentation brand theme
+# Dude brand theme for Reveal.js-presentations
 
 You are browsing the presentation brand theme for Dude, the digital agency from Finland.
 
