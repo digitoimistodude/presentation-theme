@@ -8,6 +8,12 @@
 
 You are browsing the presentation brand theme for Dude, the digital agency from Finland.
 
+## Features
+
+- Dracula theme for syntax highlighting
+- Brand theme styles
+- Highly customizable for your unique presentation
+
 ## Installation
 
 1. Clone the repository to a desired location
