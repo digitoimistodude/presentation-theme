@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'SF Mono';
+    src: url('./ligasfmononerdfont-regular.woff') format("woff"),
+    url('./ligasfmononerdfont-regular.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Mono';
+    src: url('./ligasfmononerdfont-regularitalic.woff') format("woff"),
+    url('./ligasfmononerdfont-regularitalic.woff2') format("woff2");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Mono';
+    src: url('./ligasfmononerdfont-semibold.woff') format("woff"),
+    url('./ligasfmononerdfont-semibold.woff2') format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Mono';
+    src: url('./ligasfmononerdfont-semibolditalic.woff') format("woff"),
+    url('./ligasfmononerdfont-semibolditalic.woff2') format("woff2");
+    font-weight: 600;
+    font-style: italic;
+}
