@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("./fonts/circular/circular.css");
 @import url("./fonts/sfmono-ligaturized/sfmono.css");
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
@@ -381,6 +382,58 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal h6 {
   text-transform: unset;
 }
+.reveal ul,
+.reveal ol {
+  line-height: 1.5;
+}
+.reveal ul {
+  font-size: 0.7em;
+  list-style: none;
+  padding-left: 0;
+}
+.reveal ul li {
+  display: table-row;
+  padding: 0;
+}
+.reveal ul li ol,
+.reveal ul li li {
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.reveal ul li::before {
+  display: table-cell;
+}
+.reveal ul li::before,
+.reveal ul li::marker {
+  color: var(--r-link-color);
+}
+.reveal ul li::before {
+  content: "•";
+  padding-right: 0.8rem;
+  font-size: 0.8em;
+  position: relative;
+  top: -0.1em;
+}
+.reveal ol {
+  counter-reset: ol;
+  padding-left: 0;
+}
+.reveal ol li {
+  counter-increment: ol;
+}
+.reveal ol li ul,
+.reveal ol li ol {
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.reveal ol li::before {
+  content: counter(ol) ".";
+  padding-right: 0.3rem;
+}
 .reveal p:last-child {
   margin-bottom: 0;
 }
@@ -417,6 +470,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 .reveal .tagline span {
   opacity: 0.4;
+}
+.reveal .smaller {
+  font-size: 1rem;
+  opacity: 0.8;
 }
 .reveal .avatar {
   background-size: cover;
