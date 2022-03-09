@@ -36,10 +36,10 @@ $heading4Size: 1em;
 
 // Overridden CSS variables
 :root {
-  --r-heading1-size: 2em;
-  --r-heading2-size: 1.2em;
-  --r-heading3-size: 1.1em;
-  --r-heading4-size: .9em;
+  --r-heading1-size: 2.2em;
+  --r-heading2-size: .9em;
+  --r-heading3-size: .8em;
+  --r-heading4-size: .8em;
   --r-main-font-size: 32px;
 }
 
@@ -47,6 +47,10 @@ $heading4Size: 1em;
 // Custom overrides
 // ---------------------------------------------
 .reveal {
+  // Progress bar
+  .progress {
+    height: 10px;
+  }
 
   // Code blocks
   .hljs {
@@ -61,6 +65,10 @@ $heading4Size: 1em;
   }
 
   // Headings
+  h1 {
+    color: var(--r-link-color);
+  }
+
   h1,
   h2,
   h3,
@@ -82,6 +90,7 @@ $heading4Size: 1em;
   }
 
   // Dude theme specific
+  h2,
   .title-dude-h2 {
     font-size: .9em;
     font-weight: 600;
