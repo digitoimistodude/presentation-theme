@@ -45,6 +45,16 @@ After this just run:
 npm start
 ```
 
+When you make changes, run these commands to apply them to this repository:
+
+```bash
+cp /var/www/reveal.js/css/theme/source/dude.scss /var/www/presentation-theme/css/theme/source/
+cp /var/www/reveal.js/dist/theme/dude.css /var/www/presentation-theme/css/theme/source/
+cp -r /var/www/reveal.js/assets /var/www/presentation-theme/
+```
+
+Then just commit and push naturally.
+
 ---
 
 ### Getting started with Reveal.js
