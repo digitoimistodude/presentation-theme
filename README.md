@@ -6,7 +6,9 @@
 
 # Dude brand theme for Reveal.js-presentations
 
-You are browsing the presentation brand theme for Dude, the digital agency from Finland.
+You are browsing the presentation brand theme for Dude, the digital agency from Finland. Here's how it looks like:
+
+![screely-1646931289450](https://user-images.githubusercontent.com/1534150/157714563-754b6384-29ae-47df-af2f-c4db25f4b0da.png)
 
 ## Features
 
