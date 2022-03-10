@@ -84,7 +84,13 @@ $heading4Size: 1em;
     line-height: 1.5;
   }
 
-  ul {
+  ul.no-bullets {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  ul:not([class]) {
     font-size: .7em;
     list-style: none;
     padding-left: 0;
@@ -118,9 +124,19 @@ $heading4Size: 1em;
       position: relative;
       top: -.1em;
     }
+
+    li.has-thumbs-down::before {
+      --icon-size: 28px;
+      content: ' ';
+      background-image: url('../../assets/thumbs-down.svg');
+      background-size: var(--icon-size) var(--icon-size);
+      background-repeat: no-repeat;
+      width: var(--icon-size);
+      background-position: 0 10px;
+    }
   }
 
-  ol {
+  ol:not([class]) {
     counter-reset: ol;
     padding-left: 0;
 

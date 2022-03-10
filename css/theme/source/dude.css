@@ -386,51 +386,65 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal ol {
   line-height: 1.5;
 }
-.reveal ul {
+.reveal ul.no-bullets {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.reveal ul:not([class]) {
   font-size: 0.7em;
   list-style: none;
   padding-left: 0;
 }
-.reveal ul li {
+.reveal ul:not([class]) li {
   display: table-row;
   padding: 0;
 }
-.reveal ul li ol,
-.reveal ul li li {
+.reveal ul:not([class]) li ol,
+.reveal ul:not([class]) li li {
   padding-left: 0;
   margin-left: 0;
   margin-top: 1em;
   margin-bottom: 1em;
 }
-.reveal ul li::before {
+.reveal ul:not([class]) li::before {
   display: table-cell;
 }
-.reveal ul li::before,
-.reveal ul li::marker {
+.reveal ul:not([class]) li::before,
+.reveal ul:not([class]) li::marker {
   color: var(--r-link-color);
 }
-.reveal ul li::before {
+.reveal ul:not([class]) li::before {
   content: "•";
   padding-right: 0.8rem;
   font-size: 0.8em;
   position: relative;
   top: -0.1em;
 }
-.reveal ol {
+.reveal ul:not([class]) li.has-thumbs-down::before {
+  --icon-size: 28px;
+  content: " ";
+  background-image: url("../../assets/thumbs-down.svg");
+  background-size: var(--icon-size) var(--icon-size);
+  background-repeat: no-repeat;
+  width: var(--icon-size);
+  background-position: 0 10px;
+}
+.reveal ol:not([class]) {
   counter-reset: ol;
   padding-left: 0;
 }
-.reveal ol li {
+.reveal ol:not([class]) li {
   counter-increment: ol;
 }
-.reveal ol li ul,
-.reveal ol li ol {
+.reveal ol:not([class]) li ul,
+.reveal ol:not([class]) li ol {
   padding-left: 0;
   margin-left: 0;
   margin-top: 1em;
   margin-bottom: 1em;
 }
-.reveal ol li::before {
+.reveal ol:not([class]) li::before {
   content: counter(ol) ".";
   padding-right: 0.3rem;
 }
