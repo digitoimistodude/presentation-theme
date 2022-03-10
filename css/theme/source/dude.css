@@ -421,14 +421,20 @@ section.has-light-background, section.has-light-background h1, section.has-light
   position: relative;
   top: -0.1em;
 }
+.reveal ul:not([class]) li.has-thumbs-up::before,
 .reveal ul:not([class]) li.has-thumbs-down::before {
-  --icon-size: 28px;
+  --icon-size: 22px;
   content: " ";
-  background-image: url("../../assets/thumbs-down.svg");
   background-size: var(--icon-size) var(--icon-size);
   background-repeat: no-repeat;
   width: var(--icon-size);
   background-position: 0 10px;
+}
+.reveal ul:not([class]) li.has-thumbs-down::before {
+  background-image: url("../../assets/thumbs-down.svg");
+}
+.reveal ul:not([class]) li.has-thumbs-up::before {
+  background-image: url("../../assets/thumbs-up.svg");
 }
 .reveal ol:not([class]) {
   counter-reset: ol;

@@ -125,14 +125,22 @@ $heading4Size: 1em;
       top: -.1em;
     }
 
+    li.has-thumbs-up::before,
     li.has-thumbs-down::before {
-      --icon-size: 28px;
+      --icon-size: 22px;
       content: ' ';
-      background-image: url('../../assets/thumbs-down.svg');
       background-size: var(--icon-size) var(--icon-size);
       background-repeat: no-repeat;
       width: var(--icon-size);
       background-position: 0 10px;
+    }
+
+    li.has-thumbs-down::before {
+      background-image: url('../../assets/thumbs-down.svg');
+    }
+
+    li.has-thumbs-up::before {
+      background-image: url('../../assets/thumbs-up.svg');
     }
   }
 
