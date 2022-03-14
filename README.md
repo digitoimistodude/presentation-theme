@@ -29,11 +29,11 @@ cp -r * /var/www/reveal.js/
 
 ## Creating a new presentation
 
-Just edit index.html with Markdown and reveal.js will do the rest. Considering creating a separate git repository for your index.html and images.
+Just edit index.html with Markdown and reveal.js will do the rest. When your presentation is ready, back it up along with `assets/` folder to [presentations-internal](https://github.com/digitoimistodude/presentations-internal) repo.
 
 ## Development
 
-You should improve the theme by testing it out in reveal.js repository, then copying the files over to this repository.
+You should improve the theme by testing it out in the reveal.js repository (without committing changes there), then copying the files over to this repository.
 
 For styles you'll need the required packages (install on top of reveal.js repository):
 
