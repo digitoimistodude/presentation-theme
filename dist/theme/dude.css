@@ -1,0 +1,514 @@
+@charset "UTF-8";
+@import url("./fonts/circular/circular.css");
+@import url("./fonts/sfmono-ligaturized/sfmono.css");
+section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
+  color: #222;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+:root {
+  --r-background-color: #161826;
+  --r-main-font: Circular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  --r-main-font-size: 42px;
+  --r-main-color: #fff;
+  --r-block-margin: 20px;
+  --r-heading-margin: 0 0 20px 0;
+  --r-heading-font: Circular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  --r-heading-color: #fff;
+  --r-heading-line-height: 1.2;
+  --r-heading-letter-spacing: normal;
+  --r-heading-text-transform: uppercase;
+  --r-heading-text-shadow: none;
+  --r-heading-font-weight: 600;
+  --r-heading1-text-shadow: none;
+  --r-heading1-size: 2.5em;
+  --r-heading2-size: 1.6em;
+  --r-heading3-size: 1.3em;
+  --r-heading4-size: 1em;
+  --r-code-font: SF Mono, monospace;
+  --r-link-color: #7effe1;
+  --r-link-color-dark: #32ffcf;
+  --r-link-color-hover: #4c49fe;
+  --r-selection-background-color: #4c49fe;
+  --r-selection-color: #fff;
+}
+
+.reveal-viewport {
+  background: #161826;
+  background-color: var(--r-background-color);
+}
+
+.reveal {
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  font-weight: normal;
+  color: var(--r-main-color);
+}
+
+.reveal ::selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal ::-moz-selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.3;
+  font-weight: inherit;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: var(--r-heading-margin);
+  color: var(--r-heading-color);
+  font-family: var(--r-heading-font);
+  font-weight: var(--r-heading-font-weight);
+  line-height: var(--r-heading-line-height);
+  letter-spacing: var(--r-heading-letter-spacing);
+  text-transform: var(--r-heading-text-transform);
+  text-shadow: var(--r-heading-text-shadow);
+  word-wrap: break-word;
+}
+
+.reveal h1 {
+  font-size: var(--r-heading1-size);
+}
+
+.reveal h2 {
+  font-size: var(--r-heading2-size);
+}
+
+.reveal h3 {
+  font-size: var(--r-heading3-size);
+}
+
+.reveal h4 {
+  font-size: var(--r-heading4-size);
+}
+
+.reveal h1 {
+  text-shadow: var(--r-heading1-text-shadow);
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: var(--r-block-margin) 0;
+  line-height: 1.3;
+}
+
+/* Remove trailing margins after titles */
+.reveal h1:last-child,
+.reveal h2:last-child,
+.reveal h3:last-child,
+.reveal h4:last-child,
+.reveal h5:last-child,
+.reveal h6:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+}
+
+.reveal em {
+  font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+
+.reveal ol {
+  list-style-type: decimal;
+}
+
+.reveal ul {
+  list-style-type: disc;
+}
+
+.reveal ul ul {
+  list-style-type: square;
+}
+
+.reveal ul ul ul {
+  list-style-type: circle;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px;
+}
+
+.reveal dt {
+  font-weight: bold;
+}
+
+.reveal dd {
+  margin-left: 40px;
+}
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: var(--r-block-margin) auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block;
+}
+
+.reveal q {
+  font-style: italic;
+}
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: var(--r-block-margin) auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: var(--r-code-font);
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reveal code {
+  font-family: var(--r-code-font);
+  text-transform: none;
+  tab-size: 2;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+}
+
+.reveal .code-wrapper {
+  white-space: normal;
+}
+
+.reveal .code-wrapper code {
+  white-space: pre;
+}
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th {
+  font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+}
+
+.reveal table th[align=center],
+.reveal table td[align=center] {
+  text-align: center;
+}
+
+.reveal table th[align=right],
+.reveal table td[align=right] {
+  text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top;
+}
+
+.reveal small * {
+  vertical-align: top;
+}
+
+.reveal img {
+  margin: var(--r-block-margin) 0;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: var(--r-link-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.reveal a:hover {
+  color: var(--r-link-color-hover);
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: var(--r-link-color-dark);
+}
+
+/*********************************************
+ * Frame helper
+ *********************************************/
+.reveal .r-frame {
+  border: 4px solid var(--r-main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal a .r-frame {
+  transition: all 0.15s linear;
+}
+
+.reveal a:hover .r-frame {
+  border-color: var(--r-link-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: var(--r-link-color);
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--r-link-color);
+}
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: var(--r-background-color);
+  }
+}
+:root {
+  --r-heading1-size: 2.2em;
+  --r-heading2-size: .9em;
+  --r-heading3-size: .8em;
+  --r-heading4-size: .8em;
+  --r-main-font-size: 32px;
+}
+
+.reveal .progress {
+  height: 3px;
+}
+.reveal .hljs {
+  border-radius: 4px;
+}
+.reveal .controls .controls-arrow::after,
+.reveal .controls .controls-arrow::before {
+  height: 0.4em;
+  transform-origin: 0.2em 50%;
+}
+.reveal h1 {
+  color: var(--r-link-color);
+}
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: unset;
+}
+.reveal ul,
+.reveal ol {
+  line-height: 1.5;
+}
+.reveal ul ul,
+.reveal ol ul {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.reveal ul ul li,
+.reveal ol ul li {
+  font-size: 1.2em;
+}
+.reveal ul.no-bullets {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.reveal ul:not([class]) {
+  font-size: 0.7em;
+  list-style: none;
+  padding-left: 0;
+}
+.reveal ul:not([class]) li {
+  display: table-row;
+  padding: 0;
+}
+.reveal ul:not([class]) li ol,
+.reveal ul:not([class]) li li {
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.reveal ul:not([class]) li::before {
+  display: table-cell;
+}
+.reveal ul:not([class]) li::before,
+.reveal ul:not([class]) li::marker {
+  color: var(--r-link-color);
+}
+.reveal ul:not([class]) li::before {
+  content: "•";
+  padding-right: 0.8rem;
+  font-size: 0.8em;
+  position: relative;
+  top: -0.1em;
+}
+.reveal ul:not([class]) li.has-thumbs-up::before,
+.reveal ul:not([class]) li.has-thumbs-down::before {
+  --icon-size: 22px;
+  content: " ";
+  background-size: var(--icon-size) var(--icon-size);
+  background-repeat: no-repeat;
+  width: var(--icon-size);
+  background-position: 0 10px;
+}
+.reveal ul:not([class]) li.has-thumbs-down::before {
+  background-image: url("../../assets/thumbs-down.svg");
+}
+.reveal ul:not([class]) li.has-thumbs-up::before {
+  background-image: url("../../assets/thumbs-up.svg");
+}
+.reveal ol:not([class]) {
+  counter-reset: ol;
+  padding-left: 0;
+}
+.reveal ol:not([class]) li {
+  counter-increment: ol;
+}
+.reveal ol:not([class]) li ul,
+.reveal ol:not([class]) li ol {
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.reveal ol:not([class]) li::before {
+  content: counter(ol) ".";
+  padding-right: 0.3rem;
+}
+.reveal p:last-child {
+  margin-bottom: 0;
+}
+.reveal .has-inline-flex {
+  align-items: center;
+  display: inline-flex;
+  gap: 16px;
+}
+.reveal h2,
+.reveal .title-dude-h2 {
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+  opacity: 0.8;
+}
+.reveal .title-sub {
+  font-size: 0.7em;
+}
+.reveal .title-sub span {
+  opacity: 0.7;
+}
+.reveal .title-author {
+  font-size: 0.5em;
+}
+.reveal .title-author span {
+  opacity: 0.7;
+}
+.reveal .tagline {
+  font-size: 0.4em;
+  margin: 0;
+}
+.reveal .tagline span {
+  opacity: 0.4;
+}
+.reveal .smaller {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+.reveal .avatar {
+  background-size: cover;
+  border-radius: 50%;
+  display: block;
+  height: 32px;
+  width: 32px;
+}
